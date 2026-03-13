@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ${{values.app_name}}
+  description: A Flask application for {{values.app_env}} environment
+  annotations:
+    github.com/project-slug: niketvjoshi/${{values.app_name}}
+spec:
+  type: service
+  lifecycle: experimental
+  owner: development
