@@ -1,0 +1,4 @@
+Hi,
+
+App name is: {{values.app_name}}
+App env is: {{values.app_env}}
