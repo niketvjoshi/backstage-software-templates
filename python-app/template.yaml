@@ -37,12 +37,15 @@ spec:
           app_name: ${{parameters.component_id}}
           app_env: ${{parameters.environment}}
 
+    - id: build and push
+      action: docker
+
     - id: publish
       name: Publish
       action: publish:github
       input:
         description: This is ${{ parameters.component_id }}
-        repoUrl: github.com?owner=niketvjoshi&repo=${{parameters.component_id}}
+        repoUrl: github.com?owner=niket-joshi&repo=${{parameters.component_id}}
         protectDefaultBranch: false
         repoVisibility: public
 
