@@ -40,7 +40,7 @@ jobs:
           echo ${{ '${{ needs.ci.outputs.commit_id }}' }}
           sudo curl -sL -o /usr/local/bin/yq https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64
           sudo chmod +x /usr/local/bin/yq
-          yq -i '.image.tag = "${{' ${{ needs.ci.outputs.commit_id }}' }}"' charts/${{values.app_name}}/values-${{values.app_env}}.yaml
+          yq -i '.image.tag = "${{ '${{ needs.ci.outputs.commit_id }}' }}"' charts/${{values.app_name}}/values-${{values.app_env}}.yaml
           
       - name: Commit changes
         uses: EndBug/add-and-commit@v9
