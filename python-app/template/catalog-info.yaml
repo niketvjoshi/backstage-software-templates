@@ -4,7 +4,7 @@ metadata:
   name: ${{values.app_name}}
   description: A collection of Python applications for demo purposes
   annotations:
-    github.com/project-slug: niketvjoshi/${{values.app_name}}
+    github.com/project-slug: niket-joshi/${{values.app_name}}
     backstage.io/techdocs-ref: 'dir:.'
 spec:
   type: service
