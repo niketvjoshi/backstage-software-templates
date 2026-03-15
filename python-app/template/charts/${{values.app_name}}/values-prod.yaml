@@ -1,8 +1,4 @@
 replicaCount: 2
-image:
-  repository: niketjoshi/${{values.app_name}}
-  pullPolicy: IfNotPresent
-  tag: ${{values.app_name}}-${{values.app_env}}-latest
 
 resources:
   requests:
