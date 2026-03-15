@@ -1,8 +1,8 @@
 replicaCount: 1
 image:
-  repository: niketjoshi/${{values.app_name}}
+  repository: "niketjoshi/${{ values.app_name }}"
   pullPolicy: IfNotPresent
-  tag: ${{values.app_name}}-${{values.app_env}}-latest
+  tag: "${{ values.app_name }}-${{ values.app_env }}-latest"
 imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
@@ -23,7 +23,7 @@ ingress:
   className: "nginx"
   annotations: {}
   hosts:
-    - host: ${{values.app_name}}-${{values.app_env}}.test.com
+    - host: ${{ values.app_name }}-${{ values.app_env }}.test.com
       paths:
         - path: /
           pathType: Prefix
