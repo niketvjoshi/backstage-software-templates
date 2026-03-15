@@ -1,0 +1,18 @@
+replicaCount: 1
+image:
+  repository: niketjoshi/${{values.app_name}}
+  pullPolicy: IfNotPresent
+  tag: ${{values.app_name}}-${{values.app_env}}-latest
+
+  esources:
+  requests:
+    cpu: 40m
+    memory: 40M
+livenessProbe:
+  httpGet:
+    path: /api/v1/healthz
+    port: http
+readinessProbe:
+  httpGet:
+    path: /api/v1/healthz
+    port: http

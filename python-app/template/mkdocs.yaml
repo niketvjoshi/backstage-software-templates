@@ -1,0 +1,10 @@
+site_name: '${{values.app_name}}'
+site_description: 'Main documentation for ${{values.app_name}} features and framework APIs'
+repo_url: https://github.com/niketvjoshi/${{values.app_name}}/
+edit_uri: edit/main/docs
+
+plugins:
+  - techdocs-core
+nav:
+  - Overview:
+      - Getting Started?: 'docs/index.md'
